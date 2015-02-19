@@ -43,9 +43,21 @@ $json = json_decode($content, true);
 			
 		    foreach ($value as $k => $v) { 
 		    	echo '<div id ="match">';
-		        echo "Key: " . $k . " | Value: " . $v . "<br />";
-		        foreach ($v as $k1 => $v1) { 
-			        echo "Key: " . $k1 . " | Value: " . $v1 . "<br />";
+		        echo "Match: " . $k . "<br />";
+		        foreach ($v as $k1 => $v1) {
+		        	if(is_array($v1)){
+		        		foreach ($v1 as $k2 => $v2) {
+							if(is_array($v2)){
+				        		foreach ($v2 as $k3 => $v3) {
+									echo "ArrayArrayKey: " . $k3 . " | Value: " . $v3 . "<br />";
+							    }
+				        	} else {
+				        		echo "ArrayKey: " . $k2 . " | Value: " . $v2 . "<br />";
+				        	}
+					    }
+		        	} else {
+		        		echo "Key: " . $k1 . " | Value: " . $v1 . "<br />";
+		        	}
 			    }
 			    echo "</div>";
 		    }

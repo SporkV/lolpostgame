@@ -15,11 +15,12 @@ body{
 }
 
 #match{
+	text-align: left;
 	background-color: #092949;
 	color: #CC9;
 	border:5px #CCC;
 	margin: 10px auto;
-	padding: 20px;
+	padding: 5px;
 	padding-top: 10px;
 	width: 65%;
 }
