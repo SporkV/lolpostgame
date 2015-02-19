@@ -16,14 +16,14 @@ foreach ($idjson as $key => $value) {
         }
     }
 }
-print($summonerID);
+//print($summonerID);
 
 //get match history
 $url = 'https://' . $region . '.api.pvp.net/api/lol/' . $region . '/v2.2/matchhistory/' . $summonerID . '?api_key=' . $apikey;
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 
-print($content);
+//print($content);
 
 
 ?>
@@ -32,6 +32,16 @@ print($content);
 <head>
 </head>
 <body>
+	<?PHP
+		//output data
+		foreach ($json as $key => $value) { 
+			echo "<div #match>";
+		    foreach ($value as $k => $v) { 
+		        echo "Key: " . $k . " | Value: " . $v;
+		    }
+		    echo "</div>";
+		}
+	?>
 
 </body>
 </html>
