@@ -30,18 +30,29 @@ $json = json_decode($content, true);
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="utf-8" />
+	<title>Postgame Info - Match History</title>
+	<link rel="stylesheet" type="text/css" href="parse.css" />
 </head>
 <body>
-	<?PHP
+	<div id="wrapper">
+	<h3>Match History</h3>
+		<?PHP
 		//output data
 		foreach ($json as $key => $value) { 
-			echo "<div #match>";
+			
 		    foreach ($value as $k => $v) { 
-		        echo "Key: " . $k . " | Value: " . $v;
+		    	echo '<div id ="match">';
+		        echo "Key: " . $k . " | Value: " . $v . "<br />";
+		        foreach ($v as $k1 => $v1) { 
+			        echo "Key: " . $k1 . " | Value: " . $v1 . "<br />";
+			    }
+			    echo "</div>";
 		    }
-		    echo "</div>";
+		    
 		}
-	?>
+		?>
+	</div>
 
 </body>
 </html>

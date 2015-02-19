@@ -1,0 +1,29 @@
+body{
+	text-align: center;
+	background-color: #092949;
+	font-family: sans-serif;
+}
+
+#wrapper{
+	background-color: #060e1f;
+	color: #CC9;
+	border:5px #CCC;
+	margin: 10px auto;
+	padding: 20px;
+	padding-top: 10px;
+	width: 65%;
+}
+
+#match{
+	background-color: #092949;
+	color: #CC9;
+	border:5px #CCC;
+	margin: 10px auto;
+	padding: 20px;
+	padding-top: 10px;
+	width: 65%;
+}
+
+h3{
+	color:#E6BF2B;
+}
