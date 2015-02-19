@@ -11,7 +11,17 @@ body{
 	margin: 10px auto;
 	padding: 20px;
 	padding-top: 10px;
-	width: 65%;
+	width: 85%;
+}
+
+#footer{
+	background-color: #222;
+	color: #CC9;
+	border:5px #CCC;
+	margin: 10px auto;
+	padding: 20px;
+	padding-top: 10px;
+	width: 85%;
 }
 
 h3{
