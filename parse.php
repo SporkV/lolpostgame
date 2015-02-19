@@ -51,6 +51,8 @@ $json = json_decode($content, true);
 		        	$gameTime = $v['matchDuration'];
 		        	echo "Duration: " . intval($gameTime/60) . ":" . sprintf("%02d", $gameTime%60) . "<br />";
 
+		        	echo "Participants: <br />";
+		        	$participants = $v['participants'];
 
 		        	echo "<br /><br />";
 		        	/*if(is_array($v1)){
