@@ -44,8 +44,14 @@ $json = json_decode($content, true);
 		    foreach ($value as $k => $v) { 
 		    	echo '<div id ="match">';
 		        echo "Match: " . $k . "<br />";
-		        foreach ($v as $k1 => $v1) {
-		        	if(is_array($v1)){
+		        //foreach ($v as $k1 => $v1) {
+		        	echo "Region: " . $v['region'] . "<br />";
+		        	echo "Game Mode: " . $v['matchMode'] . " | Queue Type: " . $v['queueType'] . "<br />";
+		        	echo "Duration: " . $v['matchDuration'] . "<br />";
+
+
+		        	echo "<br /><br />";
+		        	/*if(is_array($v1)){
 		        		foreach ($v1 as $k2 => $v2) {
 							if(is_array($v2)){
 				        		foreach ($v2 as $k3 => $v3) {
@@ -57,8 +63,8 @@ $json = json_decode($content, true);
 					    }
 		        	} else {
 		        		echo "Key: " . $k1 . " | Value: " . $v1 . "<br />";
-		        	}
-			    }
+		        	}*/
+			    //}
 			    echo "</div>";
 		    }
 		    
