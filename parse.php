@@ -36,7 +36,8 @@ $json = json_decode($content, true);
 </head>
 <body>
 	<div id="wrapper">
-	<h3>Match History</h3>
+	<h3>Match History</h3><br />
+	<h5>Summoner <?PHP echo $name ?> on the <?PHP echo strtoupper($region) ?> Server</h5>
 		<?PHP
 		//output data
 		foreach ($json as $key => $value) { 
@@ -45,9 +46,10 @@ $json = json_decode($content, true);
 		    	echo '<div id ="match">';
 		        echo "Match: " . $k . "<br />";
 		        //foreach ($v as $k1 => $v1) {
-		        	echo "Region: " . $v['region'] . "<br />";
-		        	echo "Game Mode: " . $v['matchMode'] . " | Queue Type: " . $v['queueType'] . "<br />";
-		        	echo "Duration: " . $v['matchDuration'] . "<br />";
+		        	//echo "Region: " . $v['region'] . "<br />";
+		        	echo "Game Mode: " . $v['matchMode'] . " | Queue Type: " . strtr ($v['queueType'], array ('_' => ' ')) . "<br />";
+		        	$gameTime = $v['matchDuration'];
+		        	echo "Duration: " . intval($gameTime/60) . ":" . sprintf("%02d", $gameTime%60) . "<br />";
 
 
 		        	echo "<br /><br />";
